@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WellnessCoach – Privacy Policy</title>
+  <style>
+    :root{
+      --bg:#0F172A; --card:#111827; --text:#E5E7EB; --muted:#9CA3AF; --accent:#3B82F6;
+      --link:#22D3EE;
+    }
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b0f14;color:var(--text);line-height:1.6;}
+    main{max-width:900px;margin:0 auto;padding:40px 20px;}
+    h1{font-size:2rem;margin:0 0 8px}
+    h2{margin-top:32px;color:#fff}
+    p,li{color:#d1d5db}
+    small, .muted{color:var(--muted)}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:20px;margin:18px 0}
+    code{background:#0b1220;border:1px solid #142037;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: <span id="updated"></span></p>
+  </header>
+
+  <section class="card">
+    <p>Welcome to <strong>WellnessCoach</strong>, a mobile app that helps you build healthy habits and practice breathing and meditation with gentle AI guidance. This Privacy Policy explains what data we collect, how we use it, and the choices you have.</p>
+  </section>
+
+  <section>
+    <h2>Scope & Summary</h2>
+    <div class="card">
+      <p>WellnessCoach includes features such as onboarding goals, a home dashboard, mood tracking, AI chatbot guidance, breathing and meditation sessions (with optional AR overlays), reports/insights, gamification (badges), settings, notifications, and in-app purchases via Google Play. These features are reflected in our Android architecture using Jetpack Compose, Firebase Authentication/Firestore, optional Room cache, and calls to AI services.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data We Collect</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Account data</strong>: basic profile (name, email, avatar) when you sign in with Firebase Authentication (Google or email/password).</li>
+        <li><strong>Profile and preferences</strong>: your wellness goals chosen during onboarding and app settings (e.g., notifications).</li>
+        <li><strong>Activity you log</strong>: mood selections (emoji + optional notes), session completions (e.g., breathing/meditation), streaks and badges.</li>
+        <li><strong>Cloud storage</strong>: your recorded entries are stored in Firebase Cloud Firestore; some data may be cached locally via Room for offline use.</li>
+        <li><strong>Notifications data</strong>: device tokens needed to deliver reminders via Firebase Cloud Messaging/WorkManager.</li>
+        <li><strong>Payments</strong>: in-app purchase status (VIP subscription) via Google Play Billing; we do not store your full payment card details.</li>
+        <li><strong>Optional AR camera access</strong>: if you enable the AR mode, the app accesses your device camera to render overlays; no video is stored by default.</li>
+        <li><strong>Usage & diagnostics</strong>: crash logs and basic analytics may be processed to improve reliability and performance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>How We Use Your Data</h2>
+    <div class="card">
+      <ul>
+        <li>To provide core functionality: sign-in, save and sync your entries, render sessions, manage VIP access.</li>
+        <li>To personalize guidance and recommendations (e.g., surface breathing ideas when your logged mood is negative) including via our AI service provider.</li>
+        <li>To send reminders and helpful nudges you opt into (morning, midday, evening).</li>
+        <li>To maintain safety, prevent misuse, and debug and improve the app.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>AI Features</h2>
+    <div class="card">
+      <p>Some features (chatbot coaching and quick suggestions) are powered by an AI API. When you use these features, we may send the necessary context (e.g., your recent mood selections or goals) to the AI provider to generate a response. We minimize data sharing and do not send data that is not required for the requested output.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Legal Bases (EEA/UK)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Contract</strong>: to deliver the services you request (account, syncing, VIP access).</li>
+        <li><strong>Consent</strong>: notifications, AR camera access, and any optional data you choose to provide.</li>
+        <li><strong>Legitimate interests</strong>: app safety, analytics, and improvements, balanced against your rights.</li>
+        <li><strong>Legal obligation</strong>: tax and purchase records required by law.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sharing Your Data</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Service providers</strong>: Google Firebase (Auth, Firestore, Messaging), Google Play Billing, AI API provider (for chat/suggestions), crash reporting and analytics providers.</li>
+        <li><strong>Compliance & safety</strong>: we may disclose information to comply with applicable law or to protect people from harm.</li>
+        <li><strong>Business transfers</strong>: if we are involved in a merger or acquisition, we will notify you and continue to protect your data.</li>
+      </ul>
+      <p>We do not sell your personal information.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>International Transfers</h2>
+    <div class="card">
+      <p>Your data may be processed in countries other than where you live. When we transfer data internationally, we use appropriate safeguards (such as standard contractual clauses) where required by law.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Retention</h2>
+    <div class="card">
+      <p>We keep your personal data only as long as necessary to provide the service and for legitimate business or legal purposes. You can request deletion of your account at any time; upon deletion, we remove or anonymize your personal data unless we must retain certain records (e.g., purchase history) to meet legal obligations.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your Choices & Rights</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Access, rectify, erase, or port</strong> your data by contacting us.</li>
+        <li><strong>Opt out</strong> of notifications in app settings or your device settings.</li>
+        <li><strong>Withdraw consent</strong> (e.g., camera for AR) by disabling permissions in your device settings.</li>
+        <li><strong>Object</strong> to processing based on legitimate interests or request restriction, where applicable.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <div class="card">
+      <p>The app is not directed to children under 13 (or the age required by your local law). We do not knowingly collect personal data from children. If you believe a child has provided us personal data, please contact us to remove it.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Security</h2>
+    <div class="card">
+      <p>We implement technical and organizational measures appropriate to the risk, including encryption in transit (HTTPS), secure authentication, and access controls. No online service can be 100% secure, but we work to protect your information.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <div class="card">
+      <p>We may update this Privacy Policy from time to time. We will post the updated version in the app and indicate the “Last updated” date. Significant changes will be communicated more prominently.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <div class="card">
+      <p>If you have questions or requests about this Privacy Policy or your personal data, contact us at <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a>.</p>
+      <p>Controller: WellnessCoach – longhrk.dev@gmail.com</p>
+    </div>
+  </section>
+
+  <footer class="muted">
+    <p>This policy reflects the app features and architecture described in the WellnessCoach specification.</p>
+  </footer>
+</main>
+<script>
+  document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
+</script>
+</body>
+</html>
