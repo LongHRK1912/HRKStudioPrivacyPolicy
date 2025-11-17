@@ -13,13 +13,25 @@
           --muted:#586958;
           font-family: Inter, Roboto, Arial, sans-serif;
         }
-        body { background:var(--bg); margin:0; padding:36px; display:flex; justify-content:center; color:var(--text); }
-        .wrap { background:white; width:100%; max-width:920px; border-radius:12px; padding:26px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
-        header { display:flex; align-items:center; gap:14px; }
-        .logo-img { width:64px; height:64px; border-radius:12px; object-fit:contain; }
+        body { background:var(--bg); margin:0; padding:20px; display:flex; justify-content:center; color:var(--text); }
+        .wrap { background:white; width:100%; max-width:920px; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+
+        header { display:flex; align-items:center; gap:14px; flex-wrap: wrap; }
+        .logo-img { width:64px; height:64px; object-fit:contain; border-radius:12px; }
+
         h2 { color:var(--accent-dark); margin-top:20px; }
+
         a { color:var(--accent-dark); text-decoration:none; }
-        footer { margin-top:20px; color:var(--muted); font-size:0.9rem; }
+
+        footer { margin-top:20px; text-align:center; color:var(--muted); font-size:0.9rem; }
+
+        @media (max-width: 600px) {
+          body { padding:10px; }
+          .wrap { padding:16px; }
+          .logo-img { width:52px; height:52px; }
+          h1 { font-size: 1.4rem; }
+          p, li { font-size:0.95rem; }
+        }
     </style>
 </head>
 <body>
@@ -34,49 +46,45 @@
 
     <section>
         <h2>1. Summary</h2>
-        <p>This Privacy Policy explains how the <strong>Chat With Myself</strong> app collects and
-            uses your data.</p>
+        <p>This policy explains how the <strong>Chat With Myself</strong> app collects and uses data.</p>
 
         <h2>2. Data We Collect</h2>
         <ul>
-            <li>User-entered content (messages, schedules, settings).</li>
-            <li>Technical information (OS version, crash logs).</li>
-            <li>Optional cloud backup data (if enabled by you).</li>
+            <li>User-created content</li>
+            <li>Technical information</li>
+            <li>Optional cloud backup</li>
         </ul>
 
         <h2>3. How We Use Data</h2>
         <ul>
-            <li>To provide core app functionality.</li>
-            <li>To improve the app and fix issues.</li>
-            <li>To support user requests.</li>
+            <li>Provide app functionality</li>
+            <li>Improve quality and fix bugs</li>
+            <li>User support</li>
         </ul>
 
         <h2>4. Data Sharing</h2>
-        <p>We do not sell user data. Data is only shared when legally required or with trusted
-            third-party service providers.</p>
+        <p>We do not sell your data...</p>
 
         <h2>5. Storage & Security</h2>
-        <p>Data is stored locally by default and encrypted where possible.</p>
+        <p>Data is stored locally and encrypted when possible.</p>
 
         <h2>6. Your Rights</h2>
         <ul>
-            <li>Access, modify, or delete your data.</li>
-            <li>Withdraw optional consent (cloud sync, etc.).</li>
+            <li>Access, modify, delete your data</li>
+            <li>Disable optional cloud sync</li>
         </ul>
 
         <h2>7. Third-Party Links</h2>
-        <p>The App may contain links to YouTube or Google Play; their privacy policies apply.</p>
+        <p>YouTube and Google Play have their own privacy policies.</p>
 
         <h2>8. Policy Updates</h2>
-        <p>We may update this policy; changes take effect when published.</p>
+        <p>We may update this policy at any time.</p>
 
         <h2>9. Contact</h2>
         <ul>
             <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
-            <li>YouTube: <a href="https://www.youtube.com/@longhrk" target="_blank">youtube.com/@longhrk</a>
-            </li>
-            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911"
-                                target="_blank">Developer Page</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer Page</a></li>
         </ul>
     </section>
 
