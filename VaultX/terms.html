@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Terms of Service - Vault-X</title>
+    <style>
+        :root {
+          --bg: #f4fff2;
+          --accent: #b7e4a8;
+          --accent-dark: #8fc37a;
+          --text: #0b2f1a;
+          --muted: #5a6b5a;
+          font-family: Inter, Roboto, system-ui, Arial, sans-serif;
+        }
+        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
+        .card { background: white; width: 100%; max-width: 900px; border-radius: 12px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+        header { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .logo-img { width: 64px; height: 64px; border-radius: 12px; object-fit: contain; }
+        h1 { margin: 0; font-size: 1.6rem; }
+        p.lead { color: var(--muted); margin-top: 6px; }
+        h2 { color: var(--accent-dark); margin-top: 22px; }
+        ul { margin-left: 20px; }
+        a { color: var(--accent-dark); text-decoration: none; font-weight: 600; }
+        footer { margin-top: 28px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+        @media (max-width: 600px) {
+          body { padding: 10px; }
+          .card { padding: 16px; }
+          .logo-img { width: 52px; height: 52px; }
+          h1 { font-size: 1.4rem; }
+          h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <header>
+        <img src="logo.webp" alt="App Logo" class="logo-img">
+        <div>
+            <h1>Terms of Service</h1>
+            <p class="lead">Effective date: <strong>December 2025</strong></p>
+        </div>
+    </header>
+
+    <section>
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>Vault-X</strong> — a private encrypted file vault. By using the App,
+            you agree to the Terms described here.</p>
+
+        <h2>2. Service Description</h2>
+        <p>Vault-X allows users to securely store private files in encrypted form inside internal
+            storage that no other app can access.</p>
+
+        <h2>3. User Responsibilities</h2>
+        <ul>
+            <li>You are responsible for keeping your Master Password secure.</li>
+            <li>The developer cannot recover your data if you forget your password.</li>
+            <li>You must comply with local laws and avoid uploading illegal content.</li>
+        </ul>
+
+        <h2>4. Security & Encryption</h2>
+        <ul>
+            <li>All files are encrypted using AES-256-GCM before being stored.</li>
+            <li>Each file uses an independent encryption key.</li>
+            <li>Vault-X never stores plaintext data on disk.</li>
+        </ul>
+
+        <h2>5. Backups & Cloud Services</h2>
+        <p>Vault-X supports optional backup to Google Drive and other cloud providers. Only
+            encrypted data is uploaded — cloud services cannot read your files.</p>
+
+        <h2>6. Limitations</h2>
+        <ul>
+            <li>The App is provided “as is.”</li>
+            <li>We do not guarantee compatibility with all devices.</li>
+            <li>We are not responsible for user mistakes such as forgotten passwords.</li>
+        </ul>
+
+        <h2>7. Termination</h2>
+        <p>We may suspend access for misuse, violation of law, or attempts to bypass encryption.</p>
+
+        <h2>8. Governing Law</h2>
+        <p>These Terms follow Vietnamese law.</p>
+
+        <h2>9. Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+            <li>Google Play: <a
+                    href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer
+                Page</a></li>
+        </ul>
+    </section>
+
+    <footer>© Vault-X — All rights reserved.</footer>
+</div>
+</body>
+</html>

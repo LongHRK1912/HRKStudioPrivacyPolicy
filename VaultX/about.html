@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>About - Vault-X</title>
+    <style>
+        :root {
+          --bg:#f7fff5;
+          --accent:#bdebb0;
+          --accent-2:#9fd99a;
+          --text:#09311c;
+          --muted:#455a48;
+          font-family: Inter, Arial, sans-serif;
+        }
+        body { background:var(--bg); margin:0; padding:20px; display:flex; justify-content:center; color:var(--text); }
+        .box { background:white; width:100%; max-width:880px; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+        header { display:flex; align-items:center; gap:14px; flex-wrap: wrap; }
+        .logo-img { width:72px; height:72px; border-radius:12px; object-fit:contain; }
+        h2 { color:var(--accent-2); margin-top:18px; }
+        .chip {
+          background:var(--accent);
+          padding:8px 12px;
+          border-radius:999px;
+          font-weight:600;
+          color:#073018;
+          text-decoration:none;
+          display:inline-block;
+          margin:6px 6px 0 0;
+        }
+        footer { color:var(--muted); text-align:center; margin-top:20px; }
+    </style>
+</head>
+<body>
+<main class="box">
+    <header>
+        <img src="logo.webp" class="logo-img" alt="Logo">
+        <div>
+            <h1>Vault-X</h1>
+            <div class="tagline">Secure. Private. Encrypted.</div>
+        </div>
+    </header>
+
+    <section>
+        <h2>What is Vault-X?</h2>
+        <p>
+            Vault-X is a secure encrypted storage app designed to help users protect private files
+            with absolute confidentiality. All data stays on your device and is encrypted
+            end-to-end.
+        </p>
+
+        <h2>Core Features</h2>
+        <ul>
+            <li>AES-256-GCM encryption for every file</li>
+            <li>Internal private storage — invisible to file managers</li>
+            <li>Master Password + biometric unlock</li>
+            <li>Import images, videos, PDFs, and any file type</li>
+            <li>Search, sort, rename, and manage encrypted files</li>
+            <li>Optional encrypted cloud backup</li>
+            <li>Secure restore when reinstalling the app</li>
+            <li>Secure delete with data overwrite (when supported)</li>
+        </ul>
+
+        <h2>Privacy Philosophy</h2>
+        <p>
+            Vault-X is built with a strict no-data-access model.
+            The developer cannot view, access, or recover your files.
+            Your data belongs entirely to you.
+        </p>
+
+        <h2>Developer & Contact</h2>
+        <p>Developed by <strong>LongHRK</strong>.</p>
+
+        <a class="chip" href="mailto:longhrk.dev@gmail.com">Email</a>
+        <a class="chip" href="https://www.youtube.com/@longhrk">YouTube</a>
+        <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">Google
+            Play</a>
+
+        <h2>Roadmap</h2>
+        <ul>
+            <li>More cloud integrations</li>
+            <li>Automatic encrypted album backups</li>
+            <li>Cross-device encrypted sync</li>
+        </ul>
+    </section>
+
+    <footer>© Vault-X — Secure File Vault</footer>
+</main>
+</body>
+</html>
