@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>About - PicPulse</title>
+    <style>
+        :root {
+          --bg:#f0fffe;
+          --accent:#b3f5ec;
+          --accent-2:#00d6b8;
+          --text:#0a2e28;
+          --muted:#4a5f5a;
+          font-family: Inter, Arial, sans-serif;
+        }
+        body { background:var(--bg); margin:0; padding:20px; display:flex; justify-content:center; color:var(--text); }
+        .box { background:white; width:100%; max-width:880px; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+        header { display:flex; align-items:center; gap:14px; flex-wrap: wrap; }
+        .logo-img { width:72px; height:72px; border-radius:12px; object-fit:contain; }
+        h2 { color:var(--accent-2); margin-top:18px; }
+        .chip {
+          background:var(--accent);
+          padding:8px 12px;
+          border-radius:999px;
+          font-weight:600;
+          color:#0a2e28;
+          text-decoration:none;
+          display:inline-block;
+          margin:6px 6px 0 0;
+        }
+        footer { color:var(--muted); text-align:center; margin-top:20px; }
+    </style>
+</head>
+<body>
+<main class="box">
+    <header>
+        <img src="logo.png" class="logo-img" alt="Logo">
+        <div>
+            <h1>PicPulse</h1>
+            <div class="tagline">One Photo. Every Day. Your Story.</div>
+        </div>
+    </header>
+
+    <section>
+        <h2>What is PicPulse?</h2>
+        <p>
+            PicPulse is a daily photo journal app that helps you capture life's moments, one day at a time.
+            Take exactly one photo each day with automatic timestamp and GPS location tracking to create
+            a beautiful visual diary of your life. Built entirely on Firebase's free platform with a modern,
+            clean interface using Jetpack Compose.
+        </p>
+
+        <h2>Core Features</h2>
+        <ul>
+            <li>One photo per day - Simple, focused daily photography</li>
+            <li>Automatic timestamp and GPS location tracking</li>
+            <li>AI-powered caption suggestions (on-device)</li>
+            <li>Daily streak tracking and achievement badges</li>
+            <li>Photo history and calendar view</li>
+            <li>Share photos to social media</li>
+            <li>Light/Dark mode with Material Design</li>
+            <li>Daily reminders via push notifications</li>
+            <li>Cloud sync across devices with Firebase</li>
+        </ul>
+
+        <h2>Gamification & Motivation</h2>
+        <p>
+            Stay motivated with achievement badges and level progression. Build daily streaks by
+            capturing photos consistently - earn badges for 7-day, 30-day, and 100-day streaks.
+            Track your progress and make photography a daily habit.
+        </p>
+
+        <h2>Developer & Contact</h2>
+        <p>Developed by <strong>LongHRK</strong>.</p>
+
+        <a class="chip" href="mailto:longhrk.dev@gmail.com">Email</a>
+        <a class="chip" href="https://www.youtube.com/@longhrk">YouTube</a>
+        <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">Google Play</a>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>Jetpack Compose for modern Android UI</li>
+            <li>Firebase Authentication, Firestore, Cloud Storage</li>
+            <li>Firebase Cloud Messaging for notifications</li>
+            <li>CameraX for camera functionality</li>
+            <li>ML Kit for AI caption suggestions (on-device)</li>
+            <li>Firebase Analytics and Crashlytics</li>
+        </ul>
+
+        <h2>Roadmap</h2>
+        <ul>
+            <li>iOS version for cross-platform sync</li>
+            <li>Group albums and shared stories</li>
+            <li>Enhanced AI with advanced captioning models</li>
+            <li>Home screen widget for Android</li>
+            <li>Audio notes and multimedia diary entries</li>
+        </ul>
+    </section>
+
+    <footer>© PicPulse – Capture Life Daily</footer>
+</main>
+</body>
+</html>

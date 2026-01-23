@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Privacy Policy - PicPulse</title>
+    <style>
+        :root {
+          --bg:#f0fffe;
+          --accent:#cff9f3;
+          --accent-dark:#00d6b8;
+          --text:#0a2e28;
+          --muted:#586958;
+          font-family: Inter, Roboto, Arial, sans-serif;
+        }
+        body { background:var(--bg); margin:0; padding:20px; display:flex; justify-content:center; color:var(--text); }
+        .wrap { background:white; width:100%; max-width:920px; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+        header { display:flex; align-items:center; gap:14px; flex-wrap: wrap; }
+        .logo-img { width:64px; height:64px; object-fit:contain; border-radius:12px; }
+        h2 { color:var(--accent-dark); margin-top:20px; }
+        a { color:var(--accent-dark); text-decoration:none; }
+        footer { margin-top:20px; text-align:center; color:var(--muted); font-size:0.9rem; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <img src="logo.png" class="logo-img" alt="Logo">
+        <div>
+            <h1>Privacy Policy</h1>
+            <p>Effective date: <strong>January 2026</strong></p>
+        </div>
+    </header>
+
+    <section>
+        <h2>1. Summary</h2>
+        <p><strong>PicPulse respects your privacy and only collects data necessary for app functionality.</strong></p>
+
+        <h2>2. What Data We Collect</h2>
+        <p>PicPulse collects the following information to provide its core features:</p>
+        <ul>
+            <li><strong>Photos:</strong> Images you capture daily are stored in Firebase Cloud Storage</li>
+            <li><strong>Location data:</strong> GPS coordinates when you take photos (optional, can be disabled)</li>
+            <li><strong>Timestamps:</strong> Date and time when photos are captured</li>
+            <li><strong>User account information:</strong> Email or authentication details via Firebase Auth</li>
+            <li><strong>Usage analytics:</strong> Anonymous usage data via Firebase Analytics to improve the app</li>
+        </ul>
+
+        <h2>3. How We Use Your Data</h2>
+        <ul>
+            <li>Display your daily photos with timestamps and locations</li>
+            <li>Track your daily streak and achievement progress</li>
+            <li>Send daily reminder notifications (if enabled)</li>
+            <li>Sync your photo journal across devices</li>
+            <li>Improve app performance and user experience</li>
+        </ul>
+
+        <h2>4. Data Storage & Security</h2>
+        <p>
+            All photos and metadata are stored securely on Firebase Cloud Storage and Cloud Firestore.
+            Firebase implements industry-standard security measures to protect your data. Your photos
+            are private and only accessible to you unless you choose to share them.
+        </p>
+
+        <h2>5. AI Caption Generation</h2>
+        <p>
+            PicPulse uses on-device AI (ML Kit or TensorFlow Lite) for caption suggestions.
+            Image processing happens locally on your device - photos are not sent to external servers
+            for AI analysis.
+        </p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>PicPulse uses Firebase services (owned by Google):</p>
+        <ul>
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore</li>
+            <li>Firebase Cloud Storage</li>
+            <li>Firebase Cloud Messaging</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Crashlytics</li>
+        </ul>
+        <p>These services are subject to Google's privacy policies.</p>
+
+        <h2>7. Your Rights</h2>
+        <ul>
+            <li>You can delete your photos at any time</li>
+            <li>You can disable location tracking in app settings</li>
+            <li>You can delete your account and all associated data</li>
+            <li>You can export your photo data</li>
+            <li>You can opt out of analytics</li>
+        </ul>
+
+        <h2>8. Data Retention</h2>
+        <p>
+            Your photos and data are retained as long as your account is active.
+            If you delete your account, all data will be permanently removed from our servers
+            within 30 days.
+        </p>
+
+        <h2>9. Children's Privacy</h2>
+        <p>
+            PicPulse is not intended for children under 13. We do not knowingly collect
+            personal information from children under 13.
+        </p>
+
+        <h2>10. Policy Updates</h2>
+        <p>We may update this policy to reflect changes in technology or legal requirements.
+            Users will be notified of significant changes.</p>
+
+        <h2>11. Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer Page</a></li>
+        </ul>
+    </section>
+
+    <footer>© PicPulse – Privacy First</footer>
+</div>
+</body>
+</html>
