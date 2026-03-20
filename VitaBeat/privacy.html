@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Privacy Policy - VitaBeat</title>
+    <style>
+        :root {
+          --bg: #fff8f8;
+          --accent: #ffe0e0;
+          --accent-dark: #ff4b4b;
+          --text: #3e1b1b;
+          --muted: #7a5c5c;
+          font-family: Inter, Roboto, Arial, sans-serif;
+        }
+        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
+        .wrap { background: white; width: 100%; max-width: 920px; border-radius: 12px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+        header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .logo-img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; }
+        h2 { color: var(--accent-dark); margin-top: 20px; }
+        a { color: var(--accent-dark); text-decoration: none; }
+        footer { margin-top: 20px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <img src="logo.png" class="logo-img" alt="Logo">
+        <div>
+            <h1>Privacy Policy</h1>
+            <p>Effective date: <strong>March 2026</strong></p>
+        </div>
+    </header>
+
+    <section>
+        <h2>1. Summary</h2>
+        <p><strong>VitaBeat respects your privacy and only collects health and medication data necessary to provide its core tracking and monitoring features.</strong></p>
+
+        <h2>2. What Data We Collect</h2>
+        <p>VitaBeat collects the following information to facilitate your health management:</p>
+        <ul>
+            <li><strong>Heart Rate Data:</strong> Signal data captured via the camera lens for HR and HRV analysis. This data remains on your device during processing.</li>
+            <li><strong>Medication Records:</strong> Names, dosages, and schedules of medications you choose to track.</li>
+            <li><strong>Health Logs:</strong> Adherence status (taken, missed, skipped) and any symptoms or notes you add to your records.</li>
+            <li><strong>Account Information:</strong> Email and basic profile details via Firebase Authentication (if enabled for sync).</li>
+            <li><strong>Usage Analytics:</strong> Anonymous diagnostic data to identify and fix technical issues.</li>
+        </ul>
+
+        <h2>3. How We Use Your Data</h2>
+        <ul>
+            <li>Calculate your real-time heart rate and cardiovascular health zones.</li>
+            <li>Provide timely medication reminders and refill alerts.</li>
+            <li>Generate personalized health reports (PDF) for your medical consultations.</li>
+            <li>Synchronize your data across devices for a seamless tracking experience.</li>
+            <li>Improve app reliability and feature precision.</li>
+        </ul>
+
+        <h2>4. On-Device Processing & Security</h2>
+        <p>
+            <strong>Biometric Processing:</strong> Your camera feed for heart rate detection is processed entirely on-device using local computer vision libraries. No image or video of your finger is ever recorded or sent to a server.
+        </p>
+        <p>
+            <strong>Cloud Security:</strong> If you use the sync feature, your medication and health logs are stored securely on Firebase. Data transmission is encrypted, ensuring only you can access your private health information.
+        </p>
+
+        <h2>5. Third-Party Services</h2>
+        <p>VitaBeat uses Google Firebase for the following services:</p>
+        <ul>
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore (Database)</li>
+            <li>Firebase Analytics & Crashlytics</li>
+        </ul>
+        <p>These services operate under Google's standard privacy policies.</p>
+
+        <h2>6. Your Rights</h2>
+        <ul>
+            <li>You can delete your health logs at any time.</li>
+            <li>You can modify or xóa medications from your list.</li>
+            <li>You can delete your account and all associated data permanently.</li>
+            <li>You can opt-out of cloud synchronization and use the app locally.</li>
+        </ul>
+
+        <h2>7. Data Retention</h2>
+        <p>
+            We retain your data only for as long as your account remains active. Upon account deletion, all cloud data is erased within 30 days. No data is shared with third-party advertisers.
+        </p>
+
+        <h2>8. Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer Page</a></li>
+        </ul>
+    </section>
+
+    <footer>© VitaBeat – Your Privacy, Our Priority</footer>
+</div>
+</body>
+</html>

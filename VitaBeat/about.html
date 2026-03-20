@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>About - VitaBeat</title>
+    <style>
+        :root {
+          --bg: #fff8f8;
+          --accent: #ffe0e0;
+          --accent-2: #ff4b4b;
+          --text: #3e1b1b;
+          --muted: #7a5c5c;
+          font-family: Inter, Arial, sans-serif;
+        }
+        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
+        .box { background: white; width: 100%; max-width: 880px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+        header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .logo-img { width: 72px; height: 72px; border-radius: 12px; object-fit: contain; }
+        h2 { color: var(--accent-2); margin-top: 18px; }
+        .chip {
+          background: var(--accent);
+          padding: 8px 12px;
+          border-radius: 999px;
+          font-weight: 600;
+          color: #3e1b1b;
+          text-decoration: none;
+          display: inline-block;
+          margin: 6px 6px 0 0;
+        }
+        footer { color: var(--muted); text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+<main class="box">
+    <header>
+        <img src="logo.png" class="logo-img" alt="Logo">
+        <div>
+            <h1>VitaBeat</h1>
+            <div class="tagline">Your Heart, Your Rhythm, Your Health.</div>
+        </div>
+    </header>
+
+    <section>
+        <h2>What is VitaBeat?</h2>
+        <p>
+            VitaBeat is a comprehensive health management app for Android designed to help you stay on top of your cardiovascular health and medication routines. 
+            By merging advanced camera-based heart rate monitoring with a robust medication tracking system, VitaBeat empowers users to manage their well-being 
+            without the need for expensive wearables. Built with modern Material Design 3, it offers a professional yet soothing experience for everyday health tracking.
+        </p>
+
+        <h2>Core Features</h2>
+        <ul>
+            <li><strong>Medication Tracking:</strong> Manage complex schedules including daily doses, specific weekdays, and "as needed" (PRN) medications.</li>
+            <li><strong>Smart Reminders:</strong> Never miss a dose with high-precision notifications and a 24/7 intelligent alert system.</li>
+            <li><strong>Heart Rate Monitor:</strong> Measure heart rate (HR) and Heart Rate Variability (HRV) instantly using just your smartphone camera.</li>
+            <li><strong>Health Insights:</strong> View detailed Heart Rate Zones (Zone 1-5) and receive actionable insights on stress levels and physiological age.</li>
+            <li><strong>Stock Management:</strong> Keep track of your pill inventory with automatic refill reminders and overdose warnings.</li>
+            <li><strong>Daily Health Journal:</strong> A unified timeline showing your medication adherence and vital sign check-ins.</li>
+            <li><strong>Gamification:</strong> Build healthy habits with daily streaks and achievement milestones.</li>
+            <li><strong>Data Export:</strong> Generate professional medical reports in PDF format to share with your healthcare provider.</li>
+        </ul>
+
+        <h2>Technological Innovation</h2>
+        <p>
+            VitaBeat utilizes <strong>Photoplethysmography (PPG)</strong> technology via the smartphone camera to detect tiny changes in light absorption under the skin, 
+            allowing for precise heart rate extraction. The app leverages Android's most reliable background scheduling APIs (AlarmManager & WorkManager) to ensure 
+            critical health reminders are delivered exactly on time, even when the device is in sleep mode.
+        </p>
+
+        <h2>Developer & Contact</h2>
+        <p>Developed by <strong>LongHRK</strong>.</p>
+
+        <a class="chip" href="mailto:longhrk.dev@gmail.com">Email</a>
+        <a class="chip" href="https://www.youtube.com/@longhrk">YouTube</a>
+        <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">Google Play</a>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>Jetpack Compose for modern Android UI</li>
+            <li>Jetpack CameraX for high-precision heart rate detection</li>
+            <li>OpenCV for advanced real-time image signal processing</li>
+            <li>Room SQLite for secure local data storage</li>
+            <li>Firebase for cloud synchronization and secure authentication</li>
+            <li>Material Design 3 with Dynamic Color support</li>
+        </ul>
+    </section>
+
+    <footer>© VitaBeat – Heart & Health Management</footer>
+</main>
+</body>
+</html>
