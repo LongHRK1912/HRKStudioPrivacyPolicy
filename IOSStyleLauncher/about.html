@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>About - iOS Style Launcher</title>
+    <style>
+        :root {
+          --bg: #f5f5f7;
+          --accent: #e8f3ff;
+          --accent-2: #0071e3;
+          --text: #1d1d1f;
+          --muted: #86868b;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
+        .box { background: white; width: 100%; max-width: 880px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+        header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .logo-img { width: 72px; height: 72px; border-radius: 12px; object-fit: contain; }
+        h2 { color: var(--accent-2); margin-top: 18px; }
+        .chip {
+          background: var(--accent);
+          padding: 8px 12px;
+          border-radius: 999px;
+          font-weight: 600;
+          color: var(--accent-2);
+          text-decoration: none;
+          display: inline-block;
+          margin: 6px 6px 0 0;
+        }
+        footer { color: var(--muted); text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+<main class="box">
+    <header>
+        <img src="logo.png" class="logo-img" alt="Logo">
+        <div>
+            <h1>iOS Style Launcher</h1>
+            <div class="tagline">Elegant, Smooth, and Personalized iOS Experience on Android.</div>
+        </div>
+    </header>
+
+    <section>
+        <h2>What is iOS Style Launcher?</h2>
+        <p>
+            iOS Style Launcher is a premium, high-performance launcher for Android that brings the sleek, elegant, and intuitive iOS aesthetic to your device. 
+            Designed with fluid animations, custom widgets, a fully functional App Library, and extensive icon customization options, it transforms your Android 
+            interface into a premium iOS-like experience. Built with performance and efficiency in mind, it provides a smooth, lag-free user experience without 
+            draining your battery.
+        </p>
+
+        <h2>Core Features</h2>
+        <ul>
+            <li><strong>iOS Aesthetic & Smoothness:</strong> Enjoy fluid screen transitions, physics-based scroll animations, and a refined layout inspired by the latest iOS design.</li>
+            <li><strong>App Library:</strong> Automatically categorize your apps into smart folders like Social, Games, Productivity, and search them instantly with a smart search bar.</li>
+            <li><strong>Custom Widgets:</strong> Add premium iOS-style widgets for weather, calendar, battery, clocks, and usage stats directly to your home screens.</li>
+            <li><strong>Icon Customization:</strong> Change individual app icons, customize icon sizes, rename apps, or hide sensitive applications to maintain a clean layout.</li>
+            <li><strong>Dynamic Blur & Liquid Glass:</strong> Features beautiful real-time Gaussian blur and liquid glass visual effects across search bars and widgets.</li>
+            <li><strong>Flexible Grids:</strong> Choose your preferred layout grids (5x4, 6x4, etc.) to perfectly fit your device's screen size and density.</li>
+            <li><strong>Smart Notification Badges:</strong> Stay updated with elegant notification counts showing directly on application icons.</li>
+            <li><strong>System Integration:</strong> Easy set-up as your default launcher, with optional shortcut links for lock screens, control centers, and assistive touch configurations.</li>
+        </ul>
+
+        <h2>Technological Innovation</h2>
+        <p>
+            iOS Style Launcher utilizes a custom high-performance rendering engine that optimizes screen drawing and animates layout components at 60 FPS (or higher on supported screens). 
+            By leveraging advanced Android WindowManager and custom RecyclerView configurations, the app ensures instant search responses and ultra-low latency transitions even on entry-level Android devices.
+        </p>
+
+        <h2>Developer & Contact</h2>
+        <p>Developed by <strong>LongHRK</strong>.</p>
+
+        <a class="chip" href="mailto:longhrk.dev@gmail.com">Email</a>
+        <a class="chip" href="https://www.youtube.com/@longhrk">YouTube</a>
+        <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">Google Play</a>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>Java & Kotlin for high-performance launcher components</li>
+            <li>Android Jetpack utilities (WorkManager, Activity/Fragment KTX)</li>
+            <li>Custom Canvas and drawing APIs for high-fidelity animations</li>
+            <li>Room SQLite for secure, lightweight home screen layouts and widget configurations</li>
+            <li>Glide/Coil for optimized, high-speed app icon caching</li>
+            <li>Material Design 3 and custom styles for modern visual presentation</li>
+        </ul>
+    </section>
+
+    <footer>© iOS Style Launcher – Premium Launcher Experience</footer>
+</main>
+</body>
+</html>
