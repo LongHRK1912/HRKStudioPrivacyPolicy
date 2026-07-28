@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Privacy Policy - AuraSleep</title>
+    <style>
+        :root {
+          --bg: #f4f5fb;
+          --accent: #e0e7ff;
+          --accent-dark: #4f46e5;
+          --text: #1e1b4b;
+          --muted: #64748b;
+          font-family: Inter, Roboto, Arial, sans-serif;
+        }
+        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
+        .wrap { background: white; width: 100%; max-width: 920px; border-radius: 12px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+        header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .logo-img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; }
+        h2 { color: var(--accent-dark); margin-top: 20px; }
+        a { color: var(--accent-dark); text-decoration: none; }
+        footer { margin-top: 20px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <img src="logo.png" class="logo-img" alt="AuraSleep Logo">
+        <div>
+            <h1>Privacy Policy</h1>
+            <p>Effective date: <strong>July 2026</strong></p>
+        </div>
+    </header>
+
+    <section>
+        <h2>1. Summary</h2>
+        <p><strong>AuraSleep values your privacy above all. We do not sell, rent, or monetize your personal health or sleep data. Most sleep metrics, sound preferences, and snore processing occur locally on your device, and health data is synced securely only when you explicitly connect Google Health Connect or Wear OS.</strong></p>
+
+        <h2>2. What Data We Collect & How It Is Handled</h2>
+        <p>AuraSleep processes the following data types to deliver personalized closed-loop sleep therapy:</p>
+        <ul>
+            <li><strong>On-Device Audio Data (Snore & Acoustic Masking):</strong> Microphone data used for real-time snore classification and active noise masking is processed transiently in temporary memory (RAM) via edge TensorFlow Lite models. <em>Raw audio recordings are never stored on persistent storage or transmitted to any external server.</em></li>
+            <li><strong>Sleep & Health Metrics:</strong> Sleep duration, sleep stage estimation (Wake, Light, REM, Deep), and heart rate/HRV metrics retrieved via Google Health Connect or Wear OS Health Services (with your explicit permission). This data is stored locally in an encrypted Room database on your device.</li>
+            <li><strong>App Preferences & Sound Presets:</strong> Custom binaural frequencies, equalizer profiles, wind-down routines, and alarm settings saved locally.</li>
+            <li><strong>Usage Analytics & Crash Reports:</strong> Anonymous performance statistics and crash diagnostics (via Firebase Crashlytics) to ensure audio playback stability and fix system issues.</li>
+        </ul>
+
+        <h2>3. How We Use Your Data</h2>
+        <ul>
+            <li>Dynamically adapt bio-acoustic soundscapes and binaural beats in response to your sleep stages.</li>
+            <li>Trigger active noise masking when nocturnal acoustic disturbances or snoring are detected.</li>
+            <li>Provide personalized CBT-I sleep efficiency insights, sleep score trends, and optimal wake-up alarms.</li>
+            <li>Detect and resolve system crashes, audio latency issues, or performance bottlenecks.</li>
+        </ul>
+
+        <h2>4. On-Device Processing & Data Security</h2>
+        <p>
+            <strong>Privacy-First Architecture:</strong> Your sleep logs, sound presets, and health telemetry stay strictly on your device within secure local storage.
+        </p>
+        <p>
+            <strong>No Voice or Conversation Storage:</strong> AuraSleep is engineered solely for sleep bio-acoustic analysis and snore detection. It does not record conversations, transcribe speech, or retain audio clips.
+        </p>
+
+        <h2>5. Third-Party Services & Integrations</h2>
+        <p>AuraSleep integrates with trusted frameworks to power specific sleep features:</p>
+        <ul>
+            <li><strong>Google Health Connect & Wear OS Health Services:</strong> Syncs physiological sleep metrics with your explicit permission.</li>
+            <li><strong>Asleep API:</strong> Encrypted sleep staging provider for bio-acoustic sleep analysis.</li>
+            <li><strong>Google Firebase (Analytics & Crashlytics):</strong> Anonymous crash and diagnostic telemetry governed by Google's privacy policy.</li>
+        </ul>
+
+        <h2>6. Your Data Rights & Controls</h2>
+        <ul>
+            <li>You can grant or revoke Microphone, Health Connect, or Notification permissions at any time through Android System Settings.</li>
+            <li>You can clear all stored sleep histories, custom presets, and logs at any time in the app settings.</li>
+        </ul>
+
+        <h2>7. Data Retention</h2>
+        <p>
+            All personalized sleep data and sound settings remain on your smartphone as long as the application is installed. Uninstalling AuraSleep or clearing application storage will permanently remove all locally cached records.
+        </p>
+
+        <h2>8. Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer Page</a></li>
+        </ul>
+    </section>
+
+    <footer>© AuraSleep – Protecting Your Sleep & Your Privacy</footer>
+</div>
+</body>
+</html>

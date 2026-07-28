@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>About - AuraSleep</title>
+    <style>
+        :root {
+          --bg: #f4f5fb;
+          --accent: #e0e7ff;
+          --accent-2: #4f46e5;
+          --text: #1e1b4b;
+          --muted: #64748b;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
+        .box { background: white; width: 100%; max-width: 880px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+        header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .logo-img { width: 72px; height: 72px; border-radius: 12px; object-fit: contain; }
+        h2 { color: var(--accent-2); margin-top: 18px; }
+        .chip {
+          background: var(--accent);
+          padding: 8px 12px;
+          border-radius: 999px;
+          font-weight: 600;
+          color: var(--accent-2);
+          text-decoration: none;
+          display: inline-block;
+          margin: 6px 6px 0 0;
+        }
+        footer { color: var(--muted); text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+<main class="box">
+    <header>
+        <img src="logo.png" class="logo-img" alt="AuraSleep Logo">
+        <div>
+            <h1>AuraSleep</h1>
+            <div class="tagline">Closed-loop AI Sleep Audio Therapy — Binaural Beats · CBT-I · Health Connect · Wear OS</div>
+        </div>
+    </header>
+
+    <section>
+        <h2>What is AuraSleep?</h2>
+        <p>
+            AuraSleep is a next-generation smart sleep therapy application for Android designed to actively enhance sleep quality through real-time adaptive bio-acoustic soundscapes. 
+            Unlike static sound generators, AuraSleep functions as an intelligent closed-loop system that listens, analyzes, and dynamically tailors bio-acoustic audio (Binaural Beats, Pink/Brown Noise, Active Masking) based on your real-time physiological states and nocturnal sleep stages.
+        </p>
+
+        <h2>Core Features</h2>
+        <ul>
+            <li><strong>Adaptive Bio-Acoustic Soundscapes:</strong> Real-time synthesized binaural beats, pink/brown noise, and atmospheric nature therapy engineered for brainwave entrainment (Delta & Theta frequency ranges).</li>
+            <li><strong>Closed-Loop AI Sleep Staging:</strong> Synchronizes with sleep monitoring algorithms (Asleep API & edge TFLite models) to detect sleep stages (Wake, Light, REM, Deep) and seamlessly fade, alter, or quiet audio.</li>
+            <li><strong>On-Device Snore & Noise Detection:</strong> Edge AI models continuously analyze nocturnal audio patterns locally to apply active noise masking when ambient disturbances occur.</li>
+            <li><strong>CBT-I Cognitive Sleep Coaching:</strong> Evidence-based Cognitive Behavioral Therapy for Insomnia tools, custom wind-down routines, sleep journals, and sleep efficiency tracking.</li>
+            <li><strong>Smart Stage-Aware Bio-Alarm:</strong> Gently wakes you at the optimal lighter sleep phase to reduce morning sleep inertia and maximize morning energy.</li>
+            <li><strong>Wear OS & Health Connect Sync:</strong> Seamless integration with Wear OS smartwatches and Google Health Connect to incorporate heart rate variability (HRV) and nocturnal body metrics into sleep insights.</li>
+        </ul>
+
+        <h2>Technological Innovation</h2>
+        <p>
+            AuraSleep features a high-performance native <strong>C++ Audio Engine</strong> built with AAudio/Oboe and AndroidX Media3/ExoPlayer, delivering sub-millisecond audio synthesis and spatial audio mixing. 
+            By leveraging lightweight TensorFlow Lite models directly on device, the app performs privacy-first audio classification for snore detection without streaming continuous raw audio recordings off your smartphone.
+        </p>
+
+        <h2>Developer & Contact</h2>
+        <p>Developed by <strong>LongHRK</strong>.</p>
+
+        <a class="chip" href="mailto:longhrk.dev@gmail.com">Email</a>
+        <a class="chip" href="https://www.youtube.com/@longhrk">YouTube</a>
+        <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">Google Play</a>
+
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>Kotlin & C++ (JNI / Oboe Engine) for low-latency bio-acoustic audio synthesis</li>
+            <li>Jetpack Compose & Material Design 3 for fluid, dark-mode friendly user interfaces</li>
+            <li>AndroidX Media3 & ExoPlayer for seamless background playback</li>
+            <li>TensorFlow Lite for on-device snore & acoustic noise recognition</li>
+            <li>Room SQLite for encrypted local storage of sleep logs and audio presets</li>
+            <li>Google Health Connect API & Wear OS Health Services for bio-metric telemetry</li>
+        </ul>
+    </section>
+
+    <footer>© AuraSleep – AI-Powered Sleep Therapy & Bio-Acoustic Wellness</footer>
+</main>
+</body>
+</html>
