@@ -1,94 +1,288 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Privacy Policy - Chat With Myself</title>
-    <style>
-        :root {
-          --bg:#f6fff4;
-          --accent:#cff4d2;
-          --accent-dark:#9ed89a;
-          --text:#082a18;
-          --muted:#586958;
-          font-family: Inter, Roboto, Arial, sans-serif;
-        }
-        body { background:var(--bg); margin:0; padding:20px; display:flex; justify-content:center; color:var(--text); }
-        .wrap { background:white; width:100%; max-width:920px; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
-
-        header { display:flex; align-items:center; gap:14px; flex-wrap: wrap; }
-        .logo-img { width:64px; height:64px; object-fit:contain; border-radius:12px; }
-
-        h2 { color:var(--accent-dark); margin-top:20px; }
-
-        a { color:var(--accent-dark); text-decoration:none; }
-
-        footer { margin-top:20px; text-align:center; color:var(--muted); font-size:0.9rem; }
-
-        @media (max-width: 600px) {
-          body { padding:10px; }
-          .wrap { padding:16px; }
-          .logo-img { width:52px; height:52px; }
-          h1 { font-size: 1.4rem; }
-          p, li { font-size:0.95rem; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - DearMe: Time Capsule Diary</title>
+  <style>
+    :root {
+      --bg: #F3F8FC;
+      --bg-gradient: linear-gradient(180deg, #F4F9FF 0%, #E7F0F9 100%);
+      --card: #FFFFFF;
+      --border: #DCE8F4;
+      --text: #0D1F33;
+      --muted: #475569;
+      --accent: #0369A1;
+      --accent-soft: #E0F2FE;
+      --accent-border: #BAE6FD;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      background: var(--bg);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 12px 32px rgba(13, 31, 51, 0.06);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .logo-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 16px rgba(3, 105, 161, 0.14);
+      flex-shrink: 0;
+    }
+    .title-group h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-pill {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--muted);
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+    }
+    .nav-pill:hover {
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+    .nav-pill.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+    section {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight-box {
+      background: #F8FBFF;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: #F1F5F9;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #0F172A;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    @media (max-width: 600px) {
+      body { padding: 14px 10px; }
+      .container { padding: 20px 16px; border-radius: 16px; }
+      .logo-img { width: 54px; height: 54px; border-radius: 14px; }
+      .title-group h1 { font-size: 1.4rem; }
+      h2 { font-size: 1.08rem; }
+      p, li { font-size: 0.94rem; }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-    <header>
-        <img src="logo.png" class="logo-img" alt="Logo">
-        <div>
-            <h1>Privacy Policy</h1>
-            <p>Effective date: <strong>November 17, 2025</strong></p>
-        </div>
-    </header>
+<main class="container">
+  <header>
+    <div class="header-top">
+      <img src="logo.png" class="logo-img" alt="DearMe Logo" />
+      <div class="title-group">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">DearMe: Time Capsule Diary · Effective date: <strong>November 21, 2026</strong></p>
+      </div>
+    </div>
+    <nav class="nav-pills" aria-label="Legal and Info Navigation">
+      <a class="nav-pill" href="about.html">About Us</a>
+      <a class="nav-pill active" href="privacy.html">Privacy Policy</a>
+      <a class="nav-pill" href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
 
-    <section>
-        <h2>1. Summary</h2>
-        <p>This policy explains how the <strong>Chat With Myself</strong> app collects and uses data.</p>
+  <section>
+    <h2>1. Summary &amp; Privacy-First Commitment</h2>
+    <div class="highlight-box">
+      This Privacy Policy applies to <strong>DearMe: Time Capsule Diary</strong> (formerly <em>Chat With Myself</em>, Android package ID <code>com.hrk.chatwithmyself</code>), developed by <strong>LongHRK (HRK Studio)</strong>.
+    </div>
+    <p>
+      DearMe is engineered around an offline-first architecture. We do <strong>not</strong> sell, rent, or trade your personal diary entries or media. Your letters, voice keepsakes, photos, and on-device AI processing stay locally on your device, and no user account is required to write or seal capsules.
+    </p>
+  </section>
 
-        <h2>2. Data We Collect</h2>
-        <ul>
-            <li>User-created content</li>
-            <li>Technical information</li>
-            <li>Optional cloud backup</li>
-        </ul>
+  <section>
+    <h2>2. Information Stored Locally on Your Device</h2>
+    <p>All core journal content is stored in app-private local storage and an on-device Room SQLite database:</p>
+    <ul>
+      <li><strong>Letters &amp; Keepsakes:</strong> Text letters, mood stamps, context stamps (city, weather, now-playing track metadata you choose to attach), scheduled unlock dates, attached photos, videos, and recorded audio keepsakes (<code>.m4a</code>).</li>
+      <li><strong>Personalization &amp; Progress:</strong> 3D Time Garden growth data, 3D pet companion and room customization state, Open When Vault entries, theme/language preferences, and optional birthdate used for birthday capsule scheduling.</li>
+      <li><strong>Security Credentials:</strong> Your optional 4-digit app lock PIN is stored locally using cryptographic hashing/Android Keystore protection.</li>
+    </ul>
+  </section>
 
-        <h2>3. How We Use Data</h2>
-        <ul>
-            <li>Provide app functionality</li>
-            <li>Improve quality and fix bugs</li>
-            <li>User support</li>
-        </ul>
+  <section>
+    <h2>3. On-Device AI Processing &amp; Optional Model Downloads</h2>
+    <ul>
+      <li><strong>100% Local Inference (DearMe Neural Vault):</strong> Features such as <em>Echo Self</em>, Daily Reflection Prompts, AI Writing Assistant, and Memory Book curation run locally on your device using LiteRT-LM models (Gemma 4 / Qwen 3.5). Your diary text is never uploaded to external AI servers.</li>
+      <li><strong>Strict Sealed-Capsule Isolation:</strong> <em>Echo Self</em> indexes and retrieves verbatim passages solely from already unsealed letters and never reads locked or unopened capsules.</li>
+      <li><strong>Optional Model Downloads:</strong> If you choose to download an on-device AI model in Settings, the app downloads the model package directly from Hugging Face (<code>huggingface.co/LongHRK/chatwithmyself-ai-models</code>) and verifies its integrity locally using SHA-256 checksums.</li>
+    </ul>
+  </section>
 
-        <h2>4. Data Sharing</h2>
-        <p>We do not sell your data...</p>
+  <section>
+    <h2>4. Optional Encrypted Cloud Backup (Google Drive)</h2>
+    <p>Cloud backup is completely optional and disabled unless you explicitly link a Google account in Settings or during onboarding:</p>
+    <ul>
+      <li><strong>Scopes Requested:</strong> DearMe requests Google Drive hidden app storage access (<code>drive.appdata</code>) along with basic profile email/display name (<code>userinfo.email</code>, <code>userinfo.profile</code>) strictly to display which Google account is linked.</li>
+      <li><strong>End-to-End Encryption:</strong> Letters, attachments, and backup metadata are encrypted on your device using <strong>AES-256-GCM</strong> before upload and stored exclusively inside your private hidden Google Drive <code>appDataFolder</code>—inaccessible to HRK Studio or other applications.</li>
+      <li><strong>User Control:</strong> You may pause, disable Wi-Fi/auto backup, switch accounts, or unlink your Google account at any time.</li>
+    </ul>
+  </section>
 
-        <h2>5. Storage & Security</h2>
-        <p>Data is stored locally and encrypted when possible.</p>
+  <section>
+    <h2>5. App Permissions &amp; Optional Network Features</h2>
+    <ul>
+      <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Used solely when you tap voice dictation (via Android Speech Recognition) or record an audio keepsake for a letter. DearMe never records audio in the background.</li>
+      <li><strong>Location (<code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_FINE_LOCATION</code>):</strong> Optional. Used only when you enable a GPS Location Lock on a capsule (verified locally against your saved unlock coordinates) or tap Auto-Stamp to fetch local weather conditions via <strong>Open-Meteo</strong> (<code>api.open-meteo.com</code>) or <code>wttr.in</code> without sending diary text or personal identity.</li>
+      <li><strong>Local Network (<code>ACCESS_LOCAL_NETWORK</code>):</strong> Optional. Used only when you host or join a local P2P QR Group Time Capsule room over the same Wi-Fi network or hotspot.</li>
+      <li><strong>Notifications &amp; Background Sync (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>):</strong> Used to deliver scheduled capsule unsealing alerts, optional daily reflection reminders, and background AI model download progress notifications.</li>
+      <li><strong>Biometrics (<code>USE_BIOMETRIC</code>):</strong> Delegated entirely to Android’s system <code>BiometricPrompt</code> API. DearMe never receives, reads, or stores raw fingerprint or facial recognition data.</li>
+      <li><strong>Eternal Lock (drand/tlock) &amp; Trusted Time:</strong> When you enable mathematical Eternal Lock on a letter, DearMe fetches public randomness beacon data from the League of Entropy <strong>drand</strong> network (<code>api.drand.sh</code>, <code>drand.cloudflare.com</code>) and performs lightweight HTTPS clock checks (<code>google.com</code>, <code>cloudflare.com</code>). No diary content is transmitted.</li>
+    </ul>
+  </section>
 
-        <h2>6. Your Rights</h2>
-        <ul>
-            <li>Access, modify, delete your data</li>
-            <li>Disable optional cloud sync</li>
-        </ul>
+  <section>
+    <h2>6. Advertising, Analytics &amp; In-App Purchases</h2>
+    <ul>
+      <li><strong>Google AdMob (<code>AD_ID</code>):</strong> Displays advertisements in the free tier. Regional privacy consent choices are managed through Google’s User Messaging Platform (UMP) and can be updated anytime via <em>Ad Privacy Options</em> in Settings. Upgrading to DearMe Pro removes ads.</li>
+      <li><strong>Google Firebase (Analytics, Crashlytics, Remote Config):</strong> Collects anonymous crash diagnostics, feature stability signals, and remote configuration values to improve app reliability. DearMe never logs letter contents, photos, voice recordings, or personal journal text to analytics or crash reports.</li>
+      <li><strong>Google Play Billing (<code>BILLING</code>):</strong> Processes optional DearMe Pro subscriptions securely through Google Play. HRK Studio does not collect or store your payment card details.</li>
+    </ul>
+  </section>
 
-        <h2>7. Third-Party Links</h2>
-        <p>YouTube and Google Play have their own privacy policies.</p>
+  <section>
+    <h2>7. Data Sharing, Retention &amp; Deletion</h2>
+    <ul>
+      <li><strong>No Sale of Data:</strong> We never sell or share your personal journal content with data brokers or advertisers.</li>
+      <li><strong>Exported Shared Capsules:</strong> When you manually export and share an encrypted <code>.dearme</code> or <code>.dearme-group</code> package or PDF Memory Book through a third-party app (such as a messenger or email client), that transfer is initiated solely by you.</li>
+      <li><strong>Retention &amp; Erasure:</strong> Local letters and backups stay on your device until you delete individual letters, trigger <em>Erase All Data</em> inside Settings, or uninstall the app. Optional Google Drive encrypted backups remain in your personal Drive <code>appDataFolder</code> until removed or unlinked.</li>
+    </ul>
+  </section>
 
-        <h2>8. Policy Updates</h2>
-        <p>We may update this policy at any time.</p>
+  <section>
+    <h2>8. Children’s Privacy</h2>
+    <p>
+      DearMe is not intended for children under 13 (or the equivalent minimum age of digital consent in your jurisdiction), and we do not knowingly collect personal information from children. If you believe a child has provided personal data through optional third-party integrations, please contact us so we can assist promptly.
+    </p>
+  </section>
 
-        <h2>9. Contact</h2>
-        <ul>
-            <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
-            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
-            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer Page</a></li>
-        </ul>
-    </section>
+  <section>
+    <h2>9. Third-Party Services &amp; External Links</h2>
+    <p>
+      External services and resources linked from or integrated into the app—including Google Play, Google Drive, Firebase, AdMob, Hugging Face, drand, Open-Meteo, YouTube, and public mental-health support directories (such as <code>findahelpline.com</code> and regional crisis hotlines)—operate under their own respective privacy policies.
+    </p>
+  </section>
 
-    <footer>© Chat With Myself — Privacy Policy</footer>
-</div>
+  <section>
+    <h2>10. Policy Updates &amp; Contact</h2>
+    <p>
+      We may update this Privacy Policy periodically as DearMe evolves. Any changes will be published on this page with an updated effective date.
+    </p>
+    <ul>
+      <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
+      <li>Google Play App: <a href="https://play.google.com/store/apps/details?id=com.hrk.chatwithmyself">DearMe: Time Capsule Diary</a></li>
+      <li>Developer Page: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">HRK Studio on Google Play</a></li>
+      <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 DearMe (HRK Studio) — Privacy Policy ·
+    <a href="about.html">About Us</a> ·
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+</main>
 </body>
 </html>

@@ -1,87 +1,249 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>About Us - Chat With Myself</title>
-    <style>
-        :root {
-          --bg:#f7fff5;
-          --accent:#bdebb0;
-          --accent-2:#9fd99a;
-          --text:#09311c;
-          --muted:#455a48;
-          font-family: Inter, Arial, sans-serif;
-        }
-        body { background:var(--bg); margin:0; padding:20px; display:flex; justify-content:center; color:var(--text); }
-        .box { background:white; width:100%; max-width:880px; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
-
-        header { display:flex; align-items:center; gap:14px; flex-wrap: wrap; }
-        .logo-img { width:72px; height:72px; border-radius:12px; object-fit:contain; }
-
-        h2 { color:var(--accent-2); margin-top:18px; }
-
-        .chip {
-          background:var(--accent);
-          padding:8px 12px;
-          border-radius:999px;
-          font-weight:600;
-          color:#073018;
-          text-decoration:none;
-          display:inline-block;
-          margin:6px 6px 0 0;
-        }
-
-        footer { color:var(--muted); text-align:center; margin-top:20px; }
-
-        @media (max-width: 600px) {
-          body { padding:10px; }
-          .box { padding:16px; }
-          .logo-img { width:60px; height:60px; }
-          h1 { font-size:1.4rem; }
-          p, li { font-size:0.95rem; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - DearMe: Time Capsule Diary</title>
+  <style>
+    :root {
+      --bg: #F3F8FC;
+      --bg-gradient: linear-gradient(180deg, #F4F9FF 0%, #E7F0F9 100%);
+      --card: #FFFFFF;
+      --border: #DCE8F4;
+      --text: #0D1F33;
+      --muted: #475569;
+      --accent: #0369A1;
+      --accent-soft: #E0F2FE;
+      --accent-border: #BAE6FD;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      background: var(--bg);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 12px 32px rgba(13, 31, 51, 0.06);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .logo-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 16px rgba(3, 105, 161, 0.14);
+      flex-shrink: 0;
+    }
+    .title-group h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-pill {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--muted);
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .nav-pill:hover {
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+    .nav-pill.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+    section {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .chip {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .chip:hover {
+      background: #D0ECFC;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: #F1F5F9;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #0F172A;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      body { padding: 14px 10px; }
+      .container { padding: 20px 16px; border-radius: 16px; }
+      .logo-img { width: 54px; height: 54px; border-radius: 14px; }
+      .title-group h1 { font-size: 1.4rem; }
+      h2 { font-size: 1.08rem; }
+      p, li { font-size: 0.94rem; }
+    }
+  </style>
 </head>
 <body>
-<main class="box">
-    <header>
-        <img src="logo.png" class="logo-img" alt="Logo">
-        <div>
-            <h1>Chat With Myself</h1>
-            <div class="tagline">Reflect on yourself — one message at a time</div>
-        </div>
-    </header>
+<main class="container">
+  <header>
+    <div class="header-top">
+      <img src="logo.png" class="logo-img" alt="DearMe Logo" />
+      <div class="title-group">
+        <h1>DearMe</h1>
+        <p class="subtitle">Time Capsule Diary &amp; Letters to Your Future Self · Formerly Chat With Myself</p>
+      </div>
+    </div>
+    <nav class="nav-pills" aria-label="Legal and Info Navigation">
+      <a class="nav-pill active" href="about.html">About Us</a>
+      <a class="nav-pill" href="privacy.html">Privacy Policy</a>
+      <a class="nav-pill" href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
 
-    <section>
-        <h2>Our Mission</h2>
-        <p>Chat With Myself helps users reflect by sending messages to their future selves.</p>
+  <section>
+    <h2>What is DearMe?</h2>
+    <p>
+      <strong>DearMe: Time Capsule Diary</strong> (package <code>com.hrk.chatwithmyself</code>, evolved from <em>Chat With Myself</em>) is a private, offline-first personal journal and time-capsule vault built like a calm conversation with yourself.
+    </p>
+    <p>
+      Instead of static diary pages, DearMe lets you seal letters, photos, videos, and real voice keepsakes for your future self—bringing past reflections, promises, and encouragement back to you right when the moment arrives.
+    </p>
+  </section>
 
-        <h2>Core Features</h2>
-        <ul>
-            <li>Send messages (1, 3, 7, 30 days)</li>
-            <li>Notification reminders</li>
-            <li>PIN/Biometric lock</li>
-            <li>Timeline tracking</li>
-            <li>Optional backup</li>
-        </ul>
+  <section>
+    <h2>Core Features</h2>
+    <ul>
+      <li><strong>Future-Self Time Capsule Letters:</strong> Write effortlessly in a chat-style diary with photos, videos, and real voice keepsakes (<code>.m4a</code>). Schedule delivery from 1 day up to 10 years—including birthdays and New Year’s Eve—customized with 12 artistic envelopes, 8 wax seals, a tactile 3D unsealing ritual, mood and context stamps (weather, city, music), Time Threads, and Future Promises.</li>
+      <li><strong>Cryptographic Eternal Lock &amp; GPS Location Lock:</strong> Seal critical capsules with mathematical <strong>Eternal Lock (drand/tlock)</strong> so they cannot be opened early, or set an optional <strong>GPS Location Lock</strong> that unlocks only when you return to a meaningful place.</li>
+      <li><strong>3D Time Garden:</strong> Every scheduled letter plants a living sprout in an interactive 3D garden that grows in real time and blooms into 6 mood-based flower species, including rare Golden Roses for letters incubated 180 days or longer.</li>
+      <li><strong>On-Device Private AI (DearMe Neural Vault):</strong> 100% local LiteRT-LM models (Gemma 4 / Qwen) power <em>Echo Self</em>—grounded verbatim in your unsealed letters with original citations while keeping sealed capsules untouched—alongside 4-tone Daily Reflection Prompts and an on-device writing assistant.</li>
+      <li><strong>Open When Vault &amp; Shared Capsules:</strong> Prepare emotional “Open When…” envelopes across 12 life themes, send AES-256 encrypted <code>.dearme</code> letters with optional memory questions to loved ones, or create local P2P QR Group Time Capsules (<code>.dearme-group</code>) with friends.</li>
+      <li><strong>Cozy 3D Companion:</strong> Build a gentle daily reflection habit alongside an interactive 3D pet companion in a customizable 3D room with daily care and milestone rewards.</li>
+      <li><strong>Timeline, Year-End Ritual &amp; Printable Memory Book:</strong> Explore your emotional journey through Timeline, <em>On This Day</em> flashbacks, annual Year-End Ritual recaps, and print-ready A5 or A4 PDF Memory Books with Polaroid-framed photos.</li>
+      <li><strong>Privacy-First Security &amp; Themes:</strong> Offline-first local storage, 4-digit PIN and biometric unlock, optional end-to-end AES-256-GCM Google Drive backup, 12+ supported languages, and 7 calming themes (Light, Dark, Nature, Lavender, Deep Ocean, Soft Rose, Midnight Violet).</li>
+    </ul>
+  </section>
 
-        <h2>Developer & Contact</h2>
-        <p>Developed by <strong>LongHRK</strong>.</p>
+  <section>
+    <h2>Technology &amp; Craft</h2>
+    <ul>
+      <li><strong>Kotlin, Jetpack Compose &amp; Material 3:</strong> Native Android UI architecture with fluid motion, 3D canvas rendering, and adaptive themes.</li>
+      <li><strong>Room SQLite &amp; Local Storage:</strong> Fast, offline-first persistence keeping your diary, media, and settings directly on your device.</li>
+      <li><strong>LiteRT-LM On-Device AI:</strong> Private local inference and retrieval so diary reflections stay completely on your phone.</li>
+      <li><strong>AES-256-GCM &amp; drand/tlock Cryptography:</strong> End-to-end encrypted cloud backups, shared capsule files, and verifiable cryptographic time locks.</li>
+      <li><strong>Google Drive Private <code>appDataFolder</code> Sync:</strong> Optional encrypted backup stored strictly inside your personal hidden app folder.</li>
+    </ul>
+  </section>
 
-        <a class="chip" href="mailto:longhrk.dev@gmail.com">Email</a>
-        <a class="chip" href="https://www.youtube.com/@longhrk">YouTube</a>
-        <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">Google Play</a>
+  <section>
+    <h2>Developer &amp; Contact</h2>
+    <p>Developed and maintained by <strong>LongHRK (HRK Studio)</strong>.</p>
+    <div class="chip-row">
+      <a class="chip" href="mailto:longhrk.dev@gmail.com">Email: longhrk.dev@gmail.com</a>
+      <a class="chip" href="https://play.google.com/store/apps/details?id=com.hrk.chatwithmyself">DearMe on Google Play</a>
+      <a class="chip" href="https://play.google.com/store/apps/dev?id=8558908657643993911">HRK Studio Developer Page</a>
+      <a class="chip" href="https://www.youtube.com/@longhrk">YouTube @longhrk</a>
+    </div>
+  </section>
 
-        <h2>Future Roadmap</h2>
-        <ul>
-            <li>AI reflections</li>
-            <li>Voice diary</li>
-            <li>Mood analytics</li>
-        </ul>
-    </section>
-
-    <footer>© Chat With Myself — Developed by LongHRK</footer>
+  <footer>
+    © 2026 DearMe (HRK Studio) — Developed by LongHRK ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms of Service</a>
+  </footer>
 </main>
 </body>
 </html>

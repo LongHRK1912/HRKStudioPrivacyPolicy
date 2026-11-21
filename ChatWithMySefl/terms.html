@@ -1,97 +1,282 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <title>Terms of Service - Chat With Myself</title>
-    <style>
-        :root {
-          --bg: #f4fff2;
-          --accent: #b7e4a8;
-          --accent-dark: #8fc37a;
-          --text: #0b2f1a;
-          --muted: #5a6b5a;
-          font-family: Inter, Roboto, system-ui, Arial, sans-serif;
-        }
-        body { background: var(--bg); margin: 0; padding: 20px; display: flex; justify-content: center; color: var(--text); }
-        .card { background: white; width: 100%; max-width: 900px; border-radius: 12px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
-
-        /* Header responsive */
-        header { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-        .logo-img { width: 64px; height: 64px; border-radius: 12px; object-fit: contain; }
-
-        h1 { margin: 0; font-size: 1.6rem; }
-        p.lead { color: var(--muted); margin-top: 6px; }
-
-        h2 { color: var(--accent-dark); margin-top: 22px; }
-
-        ul { margin-left: 20px; }
-
-        a { color: var(--accent-dark); text-decoration: none; font-weight: 600; }
-
-        footer { margin-top: 28px; color: var(--muted); font-size: 0.9rem; text-align: center; }
-
-        /* Mobile Responsive */
-        @media (max-width: 600px) {
-          body { padding: 10px; }
-          .card { padding: 16px; }
-          .logo-img { width: 52px; height: 52px; }
-          h1 { font-size: 1.4rem; }
-          h2 { font-size: 1.2rem; }
-          p, li { font-size: 0.95rem; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service - DearMe: Time Capsule Diary</title>
+  <style>
+    :root {
+      --bg: #F3F8FC;
+      --bg-gradient: linear-gradient(180deg, #F4F9FF 0%, #E7F0F9 100%);
+      --card: #FFFFFF;
+      --border: #DCE8F4;
+      --text: #0D1F33;
+      --muted: #475569;
+      --accent: #0369A1;
+      --accent-soft: #E0F2FE;
+      --accent-border: #BAE6FD;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      background: var(--bg);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 12px 32px rgba(13, 31, 51, 0.06);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .logo-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 16px rgba(3, 105, 161, 0.14);
+      flex-shrink: 0;
+    }
+    .title-group h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-pill {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--muted);
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+    }
+    .nav-pill:hover {
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+    .nav-pill.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+    section {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .notice-box {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-left: 4px solid #D97706;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      color: #451A03;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: #F1F5F9;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #0F172A;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    @media (max-width: 600px) {
+      body { padding: 14px 10px; }
+      .container { padding: 20px 16px; border-radius: 16px; }
+      .logo-img { width: 54px; height: 54px; border-radius: 14px; }
+      .title-group h1 { font-size: 1.4rem; }
+      h2 { font-size: 1.08rem; }
+      p, li { font-size: 0.94rem; }
+    }
+  </style>
 </head>
 <body>
-<div class="card">
-    <header>
-        <img src="logo.png" alt="App Logo" class="logo-img">
-        <div>
-            <h1>Terms of Service</h1>
-            <p class="lead">Effective date: <strong>November 17, 2025</strong></p>
-        </div>
-    </header>
+<main class="container">
+  <header>
+    <div class="header-top">
+      <img src="logo.png" class="logo-img" alt="DearMe Logo" />
+      <div class="title-group">
+        <h1>Terms of Service</h1>
+        <p class="subtitle">DearMe: Time Capsule Diary · Effective date: <strong>November 21, 2026</strong></p>
+      </div>
+    </div>
+    <nav class="nav-pills" aria-label="Legal and Info Navigation">
+      <a class="nav-pill" href="about.html">About Us</a>
+      <a class="nav-pill" href="privacy.html">Privacy Policy</a>
+      <a class="nav-pill active" href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
 
-    <section>
-        <h2>1. Introduction</h2>
-        <p>Welcome! These Terms govern your use of the <strong>Chat With Myself</strong> application...</p>
+  <section>
+    <h2>1. Acceptance of Terms</h2>
+    <p>
+      These Terms of Service (“Terms”) govern your download and use of <strong>DearMe: Time Capsule Diary</strong> (formerly <em>Chat With Myself</em>, package ID <code>com.hrk.chatwithmyself</code>), developed by <strong>LongHRK (HRK Studio)</strong>. By installing or using the application, you agree to these Terms and our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </section>
 
-        <h2>2. Service Description</h2>
-        <p>The App allows users to create messages and receive them later...</p>
+  <section>
+    <h2>2. Service Description</h2>
+    <p>
+      DearMe provides an offline-first private time capsule diary featuring scheduled future-self letters, multimedia keepsakes, a 3D Time Garden, on-device AI reflection tools (Echo Self, Daily Reflection Prompts, Writing Assistant), an Open When Vault, encrypted <code>.dearme</code> and P2P <code>.dearme-group</code> capsule sharing, an interactive 3D companion, Timeline &amp; Year-End Ritual views, PDF Memory Book export, and optional AES-256-GCM encrypted Google Drive backup.
+    </p>
+  </section>
 
-        <h2>3. User Responsibilities</h2>
-        <ul>
-            <li>You are responsible for all content you create.</li>
-            <li>You must comply with applicable laws.</li>
-        </ul>
+  <section>
+    <h2>3. Non-Medical &amp; Mental Health Disclaimer</h2>
+    <div class="notice-box">
+      <strong>IMPORTANT:</strong> DearMe is designed strictly as a personal journaling, mindfulness, and self-reflection tool. It is <strong>not</strong> a medical device, psychological therapy service, or crisis intervention provider.
+    </div>
+    <p>
+      Although the app may display compassionate resources and links to independent public crisis helplines (such as <code>findahelpline.com</code> and regional hotlines), DearMe does not provide medical advice, diagnosis, or treatment. If you are experiencing a mental health crisis or emotional emergency, please contact local emergency services or a qualified healthcare professional immediately.
+    </p>
+  </section>
 
-        <h2>4. Our Rights</h2>
-        <ul>
-            <li>We may suspend the App for violations.</li>
-            <li>We may update these Terms at any time.</li>
-        </ul>
+  <section>
+    <h2>4. On-Device AI Content Disclaimer</h2>
+    <p>
+      Prompts, writing suggestions, companion dialogue, and <em>Echo Self</em> responses are generated locally by on-device AI models for personal reflection and creative inspiration only. AI outputs may contain inaccuracies or misinterpretations; you are solely responsible for reviewing any AI-assisted text before saving or sharing it.
+    </p>
+  </section>
 
-        <h2>5. Intellectual Property</h2>
-        <p>All branding and code belong to the developer...</p>
+  <section>
+    <h2>5. Cryptographic Eternal Lock &amp; Local Data Responsibility</h2>
+    <ul>
+      <li><strong>Eternal Lock (<code>drand/tlock</code>):</strong> Letters sealed with cryptographic Eternal Lock are mathematically locked to a future round on the public drand randomness network. Neither you nor HRK Studio can decrypt or unlock an Eternal Lock letter before its scheduled drand round is published.</li>
+      <li><strong>Offline-First Data Custody:</strong> Because DearMe operates without central user accounts or server-side diary storage, you are responsible for maintaining your own backups (such as enabling optional encrypted Google Drive backup) and remembering your PIN, group passcodes, and shared memory answers for <code>.dearme</code> / <code>.dearme-group</code> files.</li>
+      <li><strong>Permanent Local Deletion:</strong> Uninstalling DearMe, clearing Android app storage, or using <em>Erase All Data</em> without a valid encrypted backup permanently removes local letters and media.</li>
+    </ul>
+  </section>
 
-        <h2>6. Disclaimer & Limitation</h2>
-        <p>The App is provided “as is.” We do not guarantee error-free operation...</p>
+  <section>
+    <h2>6. Subscriptions, In-App Purchases &amp; Advertisements</h2>
+    <ul>
+      <li><strong>DearMe Pro:</strong> Optional weekly, monthly, and yearly subscriptions are billed and managed exclusively through Google Play Billing. Subscriptions automatically renew unless canceled through your Google Play Subscriptions settings prior to the end of the current billing period.</li>
+      <li><strong>Refunds:</strong> All purchases and refund requests are governed by Google Play’s billing and refund policies.</li>
+      <li><strong>Advertisements:</strong> The free tier displays advertisements powered by Google AdMob, with regional consent choices configurable via <em>Ad Privacy Options</em> in Settings.</li>
+    </ul>
+  </section>
 
-        <h2>7. Termination</h2>
-        <p>We may terminate access at any time...</p>
+  <section>
+    <h2>7. User Conduct &amp; Content Ownership</h2>
+    <ul>
+      <li>You retain 100% ownership and copyright over all letters, photos, videos, audio keepsakes, and exported PDF Memory Books you create in DearMe.</li>
+      <li>You are solely responsible for the content you create and share through <code>.dearme</code> or <code>.dearme-group</code> packages and must comply with all applicable laws.</li>
+      <li>You may not attempt to reverse engineer, decompile, tamper with, or redistribute the application or its proprietary assets except as permitted by applicable law.</li>
+    </ul>
+  </section>
 
-        <h2>8. Governing Law</h2>
-        <p>These Terms follow Vietnamese law...</p>
+  <section>
+    <h2>8. Intellectual Property</h2>
+    <p>
+      All source code, UI layouts, 3D Time Garden and mascot visuals, envelope and wax seal artwork, audio/visual assets, and the <strong>DearMe</strong> and <strong>HRK Studio</strong> marks are the intellectual property of developer <strong>LongHRK</strong>.
+    </p>
+  </section>
 
-        <h2>9. Contact</h2>
-        <ul>
-            <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
-            <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
-            <li>Google Play: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">Developer Page</a></li>
-        </ul>
-    </section>
+  <section>
+    <h2>9. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+    <p>
+      DearMe is provided on an <strong>“AS IS”</strong> and <strong>“AS AVAILABLE”</strong> basis without warranties of any kind, whether express or implied. To the fullest extent permitted by law, the developer shall not be liable for any indirect, incidental, special, or consequential damages—including local data loss caused by device failure or uninstallation, delayed notifications resulting from Android battery optimization settings, or temporary unavailability of third-party services (such as Google Drive, drand beacons, or weather endpoints).
+    </p>
+  </section>
 
-    <footer>© Chat With Myself — All rights reserved.</footer>
-</div>
+  <section>
+    <h2>10. Termination, Changes &amp; Governing Law</h2>
+    <p>
+      We may update or discontinue app features or revise these Terms from time to time by posting an updated version on this page. Continued use of DearMe after updated Terms take effect constitutes acceptance of the revised Terms. These Terms are governed by and construed in accordance with the laws of Vietnam.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:longhrk.dev@gmail.com">longhrk.dev@gmail.com</a></li>
+      <li>Google Play App: <a href="https://play.google.com/store/apps/details?id=com.hrk.chatwithmyself">DearMe: Time Capsule Diary</a></li>
+      <li>Developer Page: <a href="https://play.google.com/store/apps/dev?id=8558908657643993911">HRK Studio on Google Play</a></li>
+      <li>YouTube: <a href="https://www.youtube.com/@longhrk">youtube.com/@longhrk</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 DearMe (HRK Studio) — All rights reserved ·
+    <a href="about.html">About Us</a> ·
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</main>
 </body>
 </html>
